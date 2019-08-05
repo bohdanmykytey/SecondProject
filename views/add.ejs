@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
+    <title>Add Venue</title>
+</head>
+<body>
+    <h1>Add a Venue to our Database</h1>
+    <form class="row" action="/venues/new" method="POST">
+        <div class="six columns">
+            Add an Image: 
+                1: <input type="text" name="image" /><br/>
+                2: <input type="text" name="image" /><br/>
+                3: <input type="text" name="image" /><br/>
+                4: <input type="text" name="image" /><br/>
+            
+            Name: <input type="text" /><br/>
+            Address: <input type="text" /><br/>
+            
+            What'd you think of it? Be honest:
+            <br>
+                <textarea name="comment" value="Add a review here..."></textarea>
+            <br>
+            <input class= "u-full-width" type="submit" name="Add Venue" value="Sumbit Data"/>
+        </div>
+    </form>
+    <a href ="/"><button>Back</button></a>
+</html> 
