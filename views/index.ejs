@@ -17,13 +17,11 @@
         </div>
     </div>
 
-
     <% for(let i = 0; i < venue.length; i++){ %>
         <div class="container">
             <div class="DataIndexPage">
                 <h4>Venue Name: <%= venue[i].name %> </h4>
-                <a href="/details/<%=venue[i].id %>" >Link</a>
-                <img src="<%=venue[i].image[0] %> " alt="venue image">
+                <a href="/details/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%> "</a>
             </div>
         </div>    
     <% } %>

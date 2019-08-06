@@ -14,9 +14,17 @@
 
     <div class="details">
         name: <%= venue.name %>
-        address: <%= venue.address %>
-        <%= venue.image %>
+        <br>
+        address: <%=venue.address %>
+        <br>
+        review: <%=venue.review %>
+        <img src="<%=venue.image[0] %>" alt="Venue Image"> 
     </div>
     <a href ="/"><button>Back</button></a>
+
+    <form action="/details/<%= venue.id; %>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete"/>
+    </form>
+    <a href="/details/<%=venue.id; %>/edit"><button>Edit</button></a>
 </body>
 </html>

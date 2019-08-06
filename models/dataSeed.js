@@ -39,19 +39,19 @@ router.get('/', (req, res)=>{
         {
             name: 'Marquee',
             address: '289 10th Ave, New York, NY 10001',
-            image: ['',
-                    '',
-                    '',
-                    ''],
+            image: ['https://marqueesingapore.com/wp-content/gallery/test-one/Screen-Shot-2019-05-13-at-11.39.17-AM.png',
+                    'https://marqueesingapore.com/wp-content/gallery/test-one/MBS_Marquee_View00-Entrance_2018-05-06-min.jpg',
+                    'https://media.timeout.com/images/102030497/1024/576/image.jpg',
+                    'http://www.lasvegasguestlist.com/wp-content/uploads/Marquee-Nightclub-960x608.jpgr'],
             review: 'Theres a disco, bar seasonal plunge pool & crêperie, all on the roof of the Standard Hotel.'
         },
         {
             name: '1 Oak',
             address: '453 W 17th St, New York, NY 10011',
-            image: ['',
-                    '',
-                    '',
-                    ''],
+            image: ['https://joonbug.imgix.net/ER4dhwhVmty/1oakla16.jpg',
+                    'https://photos.lasvegassun.com/media/img/photos/2013/11/15/2.jpg',
+                    'https://pbs.twimg.com/profile_images/940716505049784320/LwLoIei9.jpg',
+                    'https://www.galavantier.com/sites/default/files/styles/events_single_event_flyer/public/events/1OAKnycSat.jpg?itok=tjBuFo0U'],
             review: 'Theres a disco, bar seasonal plunge pool & crêperie, all on the roof of the Standard Hotel.'
         }
     ], (err, data)=>{

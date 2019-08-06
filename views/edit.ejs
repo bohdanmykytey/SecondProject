@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
+    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
+    <title>Edit Venue</title>
+</head>
+<body>
+    <h1>Edit the details to a Venue</h1>
+    <form action="/details/<%=venue.id%/>?_method=PUT" method="POST">
+        <div class="six columns">
+            Name: <input type="text" /><br/>
+            Address: <input type="text" /><br/>
+            
+            What'd you think of it? Be honest:
+            <br>
+                <textarea name="comment" value="Add a review here..."></textarea>
+            <br>
+            <input type="submit" name="Add Venue" value="Sumbit Data"/>
+            <input type="submit" name="submit" value="Submit Changes"/>
+        </div>
+    </form>
+
+    <a href ="/"><button>Back</button></a>
+</html> 
+
