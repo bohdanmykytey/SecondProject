@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Add a Venue to our Database</h1>
-    <form class="row" action="/venues/new" method="POST">
+    <form class="row" action="/" method="POST">
         <div class="six columns">
             Add an Image: 
                 1: <input type="text" name="image" /><br/>
@@ -15,12 +15,12 @@
                 3: <input type="text" name="image" /><br/>
                 4: <input type="text" name="image" /><br/>
             
-            Name: <input type="text" /><br/>
-            Address: <input type="text" /><br/>
+            Name: <input type="text" name="name"/><br/>
+            Address: <input type="text" name="address" /><br/>
             
             What'd you think of it? Be honest:
             <br>
-                <textarea name="comment" value="Add a review here..."></textarea>
+                <textarea name="comment" name="review" value="Add a review here..."></textarea>
             <br>
             <input class= "u-full-width" type="submit" name="Add Venue" value="Sumbit Data"/>
         </div>

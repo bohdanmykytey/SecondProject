@@ -6,7 +6,7 @@
     <title> Venues </title>
 </head>
     <nav>
-        <span>Add Your Own Club to our database <a href="/new"><button>here</button></a></span>
+        <span>Add Your Own Club to our database <a href="venues/new"><button>here</button></a></span>
     </nav>
 <body>
     <h1>Five Stars Only</h1>
@@ -20,7 +20,7 @@
     <% for(let i = 0; i < venue.length; i++){ %>
         <div class="container">
             <div class="DataIndexPage">
-                <h4>Venue Name: <%= venue[i].name %> </h4>
+                <h4>Venue : <%= venue[i].name %> </h4>
                 <a href="/details/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%> "</a>
             </div>
         </div>    
