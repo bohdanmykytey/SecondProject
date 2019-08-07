@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </head>
     <title>Edit Venue</title>
 </head>
 <body>
     <h1>Edit the details to a Venue</h1>
-    <form action="/details/<%=venue.id%>?_method=PUT" method="POST">
+    <form action="/venues/<%=venue.id%>?_method=PUT" method="POST">
         <div class="six columns">
             Name: <input name="name" type="text" value="<%=venue.name%>"/><br/>
             Address: <input name="address" type="text" value="<%=venue.address%>"/><br/>

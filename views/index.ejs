@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/myStyle.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </head>
     <title> Venues </title>
 </head>
     <nav>
@@ -21,7 +23,7 @@
         <div class="container">
             <div class="DataIndexPage">
                 <h4>Venue : <%= venue[i].name %> </h4>
-                <a href="/details/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%> "</a>
+                <a href="/venues/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%>"/> </a>
             </div>
         </div>    
     <% } %>

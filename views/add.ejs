@@ -1,27 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <title>Add Venue</title>
 </head>
 <body>
     <h1>Add a Venue to our Database</h1>
-    <form class="row" action="/" method="POST">
-        <div class="six columns">
-            Add an Image: 
-                1: <input type="text" name="image" /><br/>
-                2: <input type="text" name="image" /><br/>
-                3: <input type="text" name="image" /><br/>
-                4: <input type="text" name="image" /><br/>
-            
-            Name: <input type="text" name="name"/><br/>
-            Address: <input type="text" name="address" /><br/>
-            
-            What'd you think of it? Be honest:
-            <br>
-                <textarea name="comment" name="review" value="Add a review here..."></textarea>
-            <br>
+    <div class="row">
+    <form class="col s12" action="/venues" method="POST">
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" name="image" class="validate" id="image_one"/><br/>
+                <label for="image_one">Add First Image</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" name="image" class="validate" id="image_two"/><br/>
+                    <label for="image_two">Add Second Image</label>
+            </div>
+            </div>    
+            <div class="row">
+                <div class="input-field col s6"></div>
+                    <input type="text" name="image" class="validate" id="image_three"/><br/>
+                    <label for="image_three">Add Third Image</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <input type="text" name="image" class="validate" id="image_four" /><br/>
+                    <label for="image_four">Add Fourth Image Here</label>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="input-field col s12">
+                    <input type="text" name="name" class="validate" id="venue_name"/><br/>
+                    <label for="venue_name">Name of Venue</label>
+                </div>
+            </div>    
+            <div class="row">
+                <div class="input-field cold s12">    
+                    <input type="text" name="address" class="validate" id="venue_address"/><br/>
+                    <label for="venue_address">Address</label>
+                </div>
+            </div>    
+            <div class="row">
+            </div>    
+            <div class="row">
+                <div class="input-field col s12">
+                    <textarea name="comment" name="review" id="textarea1" class="materialize-textarea"></textarea>
+                    <label for="textarea1">Submit Your Review Here</label>
+                </div>
+            </div>
+        </div>
             <input class= "u-full-width" type="submit" name="Add Venue" value="Sumbit Data"/>
         </div>
     </form>

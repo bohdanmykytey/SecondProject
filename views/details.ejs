@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/normalize.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/skeleton.css">
-    <link rel="stylesheet" href="/public/Skeleton-2.0.4/css/myStyle.css">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      </head>
     <title>Venue in Detail</title>
 </head>
 <body>
@@ -18,13 +20,32 @@
         address: <%=venue.address %>
         <br>
         review: <%=venue.review %>
-        <img src="<%=venue.image[0] %>" alt="Venue Image"> 
+        <img src="<%=venue.image[2] %>" alt="Venue Image"> 
     </div>
+
+    <div class="carousel">
+            <a class="carousel-item" href="#one!"><img src="<%= venue.image[0]%>"></a>
+            <a class="carousel-item" href="#two!"><img src="<%= venue.image[1]%>"></a>
+            <a class="carousel-item" href="#three!"><img src="<%= venue.image[2]%>"></a>
+            <a class="carousel-item" href="#four!"><img src="<%= venue.image[3]%>"></a>
+    </div>
+              
+
     <a href ="/"><button>Back</button></a>
 
-    <form action="/details/<%= venue.id; %>?_method=DELETE" method="POST">
+    <form action="/venues/<%= venue.id; %>?_method=DELETE" method="POST">
         <input type="submit" value="Delete"/>
     </form>
-    <a href="/details/<%=venue.id; %>/edit"><button>Edit</button></a>
+    <a href="/venues/<%=venue.id; %>/edit"><button>Edit</button></a>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let elems = document.querySelectorAll('.carousel');
+            let instances = M.Carousel.init(fullWidth, false);
+        });
+
+        instance.next();
+    </script>
+
 </body>
 </html>
