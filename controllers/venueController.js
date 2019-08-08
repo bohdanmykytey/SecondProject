@@ -1,7 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const Venue = require('../models/schema.js')
+const Seed = require('../models/dataSeed.js')
 
+// router.get(/venues/seed, (req,res)   =>  {
+//     Venue.create(Seed, (err, seededHeroku) =>   {
+//         res.redirect('/')
+//     })
+// })
 
 // Display Routes for maind index.ejs
 router.get('/venues', (req,res) => {
