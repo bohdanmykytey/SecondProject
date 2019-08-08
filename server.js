@@ -9,6 +9,7 @@ const methodOverride = require('method-override');
 const serverController = require('../project_2/controllers/venueController.js')
 
 //middleware
+app.use(express.static('public'))
 app.use(methodOverride('_method'));
 app.use(express.urlencoded({extended:true}));
 
@@ -25,6 +26,5 @@ app.use('/', serverController)
 app.get('/', (req,res) => {
  res.redirect('/venues')
 })
-
 
 app.listen(PORT, () => console.log('Listening on port:', PORT));

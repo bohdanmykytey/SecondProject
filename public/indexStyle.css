@@ -1,0 +1,19 @@
+img { 
+    width: 60%;
+    height: auto;
+}
+
+.addButton  {
+    padding-left: 50px;
+}
+
+.h1ShowPage {
+    padding-left: 100px;
+}
+
+
+.carousel .carousel-item {
+    height: auto;
+    width: auto !important;
+}
+

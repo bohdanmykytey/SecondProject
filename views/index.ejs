@@ -2,16 +2,23 @@
 <head>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/indexStyle.css"
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       </head>
     <title> Venues </title>
 </head>
     <nav>
-        <span>Add Your Own Club to our database <a href="venues/new"><button>here</button></a></span>
+        <div class="addButton">
+            Add to our list here: 
+            <a href="venues/new" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+        </div>
     </nav>
 <body>
-    <h1>Five Stars Only</h1>
+
+    <div class="center-align">
+        <h1>Five Stars Only</h1>
+    </div>
 
     <div class="container">
         <div class="display">
@@ -20,10 +27,12 @@
     </div>
 
     <% for(let i = 0; i < venue.length; i++){ %>
-        <div class="container">
+        <div class="center-align">
             <div class="DataIndexPage">
                 <h4>Venue : <%= venue[i].name %> </h4>
-                <a href="/venues/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%>"/> </a>
+                <div class=indexImage">
+                    <a href="/venues/<%=venue[i].id %>" ><img src="<%=venue[i].image[0]%>"/> </a>
+                </div>    
             </div>
         </div>    
     <% } %>
