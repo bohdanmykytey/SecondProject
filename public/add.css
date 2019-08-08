@@ -1,0 +1,22 @@
+body    {
+    width: 60%;
+    overflow: none;
+    margin: 0 auto;
+}
+
+h1  {
+    text-align: center;
+}
+
+.row    {
+    margin: 0 auto !important;
+    
+}
+
+#venue_address  {
+   padding-left: 10px;
+}
+
+.buttons    {
+    padding-left: 2%;
+}

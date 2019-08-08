@@ -1,0 +1,13 @@
+body    {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.buttons   {
+    display: inline-flex;
+    padding-right: 4px;
+    margin-right: 2px;
+    /* margin-left: 2px; */
+    margin-bottom: 100px;
+}   
+

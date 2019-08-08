@@ -3,42 +3,40 @@
 <head>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="/add.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
     <title>Add Venue</title>
 </head>
 <body>
-    <h1>Add a Venue to our Database</h1>
+    <h1>Add Venue to Database</h1>
     <div class="row">
     <form class="col s12" action="/venues" method="POST">
         <div class="row">
             <div class="input-field col s6">
                 <input type="text" name="image" class="validate" id="image_one"/><br/>
-                <label for="image_one">Add First Image</label>
+                <label for="image_one">Image</label>
             </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input type="text" name="image" class="validate" id="image_two"/><br/>
-                    <label for="image_two">Add Second Image</label>
+            <div class="input-field col s6">
+                <input type="text" name="image" class="validate" id="image_two"/><br/>
+                <label for="image_two">Image</label>
+            </div> 
+        </div>        
+        <div class="row">
+            <div class="input-field col s6">
+                <input type="text" name="image" class="validate" id="image_three"/><br/>
+                <label for="image_three">Image</label>
+        </div>
+            <div class="input-field col s6">
+                <input type="text" name="image" class="validate" id="image_four"/><br/>
+                <label for="image_four">Image</label>
             </div>
-            </div>    
-            <div class="row">
-                <div class="input-field col s6"></div>
-                    <input type="text" name="image" class="validate" id="image_three"/><br/>
-                    <label for="image_three">Add Third Image</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input type="text" name="image" class="validate" id="image_four" /><br/>
-                    <label for="image_four">Add Fourth Image Here</label>
-                </div>
-            </div>    
+        </div>    
             <div class="row">
                 <div class="input-field col s12">
                     <input type="text" name="name" class="validate" id="venue_name"/><br/>
-                    <label for="venue_name">Name of Venue</label>
+                    <label for="venue_name">Name</label>
                 </div>
             </div>    
             <div class="row">
@@ -48,16 +46,19 @@
                 </div>
             </div>    
             <div class="row">
-            </div>    
-            <div class="row">
                 <div class="input-field col s12">
-                    <textarea name="comment" name="review" id="textarea1" class="materialize-textarea"></textarea>
-                    <label for="textarea1">Submit Your Review Here</label>
+                    <textarea name="review" name="review" id="textarea" class="materialize-textarea"></textarea>
+                    <label for="textarea">Review</label>
                 </div>
             </div>
-        </div>
-            <input class= "u-full-width" type="submit" name="Add Venue" value="Sumbit Data"/>
-        </div>
+        <div class="buttons">
+            <button class="btn waves-effect waves-light" type="submit" name="Add Venue">Submit
+                    <i class="material-icons right"></i>
+            </button>
+
     </form>
-    <a href ="/"><button>Back</button></a>
+            <a href ="/"><button class="btn waves-effect waves-light" type="submit" name="action">Back
+                <i class="material-icons right"></i>
+            </button></a>
+        </div>
 </html> 

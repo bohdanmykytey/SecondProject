@@ -3,7 +3,7 @@
 <head>
     <head>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-        <link rel="stylesheet" href="/detailsStyle.css">
+        <link rel="stylesheet" href="/details.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     </head>
@@ -15,7 +15,8 @@
     </div>
 
     <div class="details">
-        name: <%= venue.name %>
+        name: 
+        <%= venue.name %>
         <br>
         address: <%=venue.address %>
         <br>
@@ -30,18 +31,29 @@
             <a class="carousel-item" href="#four!"><img src="<%= venue.image[3]%>"></a>
     </div>
               
+    <div class="buttons">
+        <a href ="/">
+            <button class="btn waves-effect waves-light" class="buttons" type="submit" name="action">Back
+                <i class="material-icons right"></i>
+            </button>
+        </a>
 
-    <a href ="/"><button>Back</button></a>
 
-    <form action="/venues/<%= venue.id; %>?_method=DELETE" method="POST">
-        <input type="submit" value="Delete"/>
-    </form>
-    <a href="/venues/<%=venue.id; %>/edit"><button>Edit</button></a>
-    
+        <form action="/venues/<%= venue.id; %>?_method=DELETE" method="POST">
+            <a href ="/"><button class="btn waves-effect waves-light" class=buttons value="Delete" type="submit" name="action">Delete
+                    <i class="material-icons right"></i>
+            </button></a>
+        </form>
+
+        <a href="/venues/<%=venue.id; %>/edit"><button class="btn waves-effect waves-light" class="buttons" type="submit" name="action">Edit
+            <i class="material-icons right"></i>
+        </button></a>
+    </div>
+
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             let elems = document.querySelectorAll('.carousel');
-            let instances = M.Carousel.init(elems, {fullWidth: false, indicators: true, duration: 100});
+            let instances = M.Carousel.init(elems, {fullWidth: false, indicators: false, duration: 100});
         });
 
         instance.next();
