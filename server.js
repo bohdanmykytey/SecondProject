@@ -3,8 +3,8 @@ const mongoose = require ('mongoose');
 const app = express ();
 const PORT = process.env.PORT || 3000;
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/venues'
-const Venue = require('../project_2/models/schema.js')
-const dataSeed = require('./models/dataSeed.js')
+// const Venue = require('../project_2/models/schema.js')
+// const dataSeed = require('./models/dataSeed.js')
 const methodOverride = require('method-override');
 const serverController = require('../project_2/controllers/venueController.js')
 
