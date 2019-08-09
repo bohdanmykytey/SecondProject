@@ -5,10 +5,6 @@ const Venue = require('../models/schema.js')
 //constroller/router routes
 
 
-
-
-
-
 //seed data 
 router.get('/', (req, res)=>{
     Venue.create([
@@ -111,4 +107,4 @@ const array = [
     }
 ]
 
-module.exports = {router, array};
+module.exports = router;

@@ -1,13 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const Venue = require('../models/schema.js')
-const Seed = require('../models/dataSeed.js')
+// const Seed = require('../models/dataSeed.js')
 
-// router.get(/venues/seed, (req,res)   =>  {
-//     Venue.create(Seed, (err, seededHeroku) =>   {
-//         res.redirect('/')
-//     })
-// })
 
 // Display Routes for maind index.ejs
 router.get('/venues', (req,res) => {
@@ -27,7 +22,6 @@ router.get('/venues', (req,res) => {
 router.get('/venues/new', (req, res) => {
     res.render('add.ejs')
 })
-  
 
 //view details route
 router.get('/venues/:id', (req, res)  =>  {
@@ -53,7 +47,6 @@ router.post('/venues', (req, res) => {
         }
     });
 });
-  
 
 //delete route
 router.delete('/venues/:id', (req, res) => {
