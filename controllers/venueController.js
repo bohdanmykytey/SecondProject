@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Venue = require('../models/schema.js')
-// const Seed = require('../models/dataSeed.js')
+const Seed = require('../models/dataSeed.js')
 
 
 // Display Routes for maind index.ejs
@@ -16,6 +16,13 @@ router.get('/venues', (req,res) => {
             })
         }
     })
+})
+
+router.get('/seed' , (req, res) =>  {
+    Venue.create(Seed, (err, seedData) => {
+        if (err) console.log('seeding error',err)
+        console.log('seeded successfully:',seedData)
+    });
 })
 
 //render add.ejs page

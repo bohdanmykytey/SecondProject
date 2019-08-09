@@ -19,7 +19,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, () => {
 });
 
 //seed route
-app.use('/seed', dataSeed)
+// app.use('/seed', dataSeed)
 app.use('/', serverController)
 
 // Display Routes for maind index.ejs
