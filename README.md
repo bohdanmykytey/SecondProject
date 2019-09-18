@@ -8,3 +8,4 @@ The puprose of this app is designed to be a database that leverages crow-sourced
 
 With time I intend to add user authentication and allow for people to log in, add a comment and actually use this site for figuring out where to go for a night out.
 
+Screenshots of the project are included in the .jpeg file above.
